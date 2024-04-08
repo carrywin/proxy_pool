@@ -43,7 +43,7 @@ DB_CONN = 'redis://:@127.0.0.1:6379/0'
 
 PROXY_FETCHER = [
     "freeProxy01",
-    "freeProxy02",
+   #  "freeProxy02",
     "freeProxy03",
     "freeProxy04",
     "freeProxy05",
@@ -52,7 +52,8 @@ PROXY_FETCHER = [
     "freeProxy08",
     "freeProxy09",
     "freeProxy10",
-    "freeProxy11"
+    "freeProxy11",
+    "freeProxy12"
 ]
 
 # proxy table name

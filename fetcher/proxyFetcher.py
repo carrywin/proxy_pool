@@ -234,9 +234,23 @@ class ProxyFetcher(object):
     #             yield ':'.join(proxy)
 
 
+    @staticmethod
+    def freeProxy12():
+        """
+        代理66 http://www.66ip.cn/
+        """
+        url = "http://www.66ip.cn/nmtq.php?getnum=100&isp=0&anonymoustype=4&start=&ports=&export=&ipaddress=&area=2&proxytype=1&api=66ip"
+        resp = WebRequest().get(url, timeout=10)
+        proxies = re.findall(r'\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\:\d+', resp.text)
+        for proxy in proxies:
+            yield proxy
+
+        
+
+
 if __name__ == '__main__':
     p = ProxyFetcher()
-    for _ in p.freeProxy11():
+    for _ in p.freeProxy12():
         print(_)
 
 # http://nntime.com/proxy-list-01.htm
